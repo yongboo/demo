@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import { formatCurrency } from '@/utils/common'
+// import { formatCurrency } from '@/utils/common'
 export default {
   name: 'CoinListTable',
   data() {
