@@ -1,0 +1,40 @@
+#app {
+  // 主体区域
+  .main-container {
+    height: 100%;
+    min-height: 1000px;
+  } 
+  // 顶部导航栏
+  .headerbar-container {
+    width: 100%;
+    background-color: $menuBg;
+    .navbar{
+      width: 1140px;
+      margin: 0 auto;
+    }
+
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // z-index: 1001;
+    a {
+      // display: inline;
+      // width: 100%;
+    }
+    .svg-icon {
+      margin-right: 16px;
+    }
+    .el-menu {
+      border: none;
+    }
+  }
+  // .nest-menu .el-submenu>.el-submenu__title,
+  // .el-submenu .el-menu-item {
+  //   min-width: 180px;
+  //   background-color: $subMenuBg;
+  //   &:hover {
+  //     background-color: $menuHover;
+  //   }
+  // }
+}

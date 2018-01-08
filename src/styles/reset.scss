@@ -1,0 +1,47 @@
+// 覆盖首页货币列表的Nav样式
+.coins-table, .exchanges-table{
+  padding-top: 12px;
+  &>.el-menu>li {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 8px;
+    &.el-submenu{
+      .el-submenu__title {
+        padding: 0 4px;
+        height: 40px;
+        line-height: 40px;
+        .el-submenu__icon-arrow{
+          margin-left:4px;
+        }
+      }
+      .el-menu {
+        top: 40px;
+        .el-menu-item{
+          min-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+// 表格样式重置
+.el-table {
+  margin-top:12px;
+  .el-table__header {
+    tr {
+      background-color: #e5e9f2;
+    }
+  } 
+}
+
+// 涨跌颜色
+.el-table .fall {
+  color: #093;
+}
+.el-table .rise {
+  color: #d20;
+}
+.el-table .normal {
+  color: #409EFF;
+}
+
