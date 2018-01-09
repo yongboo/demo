@@ -183,12 +183,12 @@ export default {
     },
     tableCellClassName({ row, column, rowIndex, columnIndex }) {
       if (columnIndex === 1 || columnIndex === 3 || columnIndex === 6 || columnIndex === 7) {
-        return 'normal'
+        return 'normal-color'
       } else if (columnIndex === 5) {
         if (parseFloat(row['increase_24']) >= 0) {
-          return 'rise'
+          return 'rise-color'
         } else {
-          return 'fall'
+          return 'fall-color'
         }
       }
       return ''

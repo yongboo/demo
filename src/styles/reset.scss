@@ -35,13 +35,15 @@
 }
 
 // 涨跌颜色
-.el-table .fall {
-  color: #093;
-}
-.el-table .rise {
+.fall-color {
   color: #d20;
 }
-.el-table .normal {
+.rise-color {
+  color: #093;
+}
+.normal-color {
   color: #409EFF;
 }
+
+
 

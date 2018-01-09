@@ -31,7 +31,7 @@
     <div class="exchanges-list">
       <el-row>
         <el-col :span="3" class="icon">
-          <a href="#"><img src="../../assets/ex_images/huobipro.png"></a>
+          <a href="#"><img src="../../assets/ex_imgs/huobipro.png"></a>
         </el-col>
         <el-col :span="21">
           <a class="title" href="#">火币Pro</a>
@@ -46,7 +46,7 @@
       </el-row>
       <el-row>
         <el-col :span="3" class="icon">
-          <a href="#"><img src="../../assets/ex_images/huobipro.png"></a>
+          <a href="#"><img src="../../assets/ex_imgs/huobipro.png"></a>
         </el-col>
         <el-col :span="21">
           <a class="title" href="#">火币Pro</a>
@@ -61,7 +61,7 @@
       </el-row>
       <el-row>
         <el-col :span="3" class="icon">
-          <a href="#"><img src="../../assets/ex_images/huobipro.png"></a>
+          <a href="#"><img src="../../assets/ex_imgs/huobipro.png"></a>
         </el-col>
         <el-col :span="21">
           <a class="title" href="#">火币Pro</a>
@@ -76,7 +76,7 @@
       </el-row>
       <el-row>
         <el-col :span="3" class="icon">
-          <a href="#"><img src="../../assets/ex_images/huobipro.png"></a>
+          <a href="#"><img src="../../assets/ex_imgs/huobipro.png"></a>
         </el-col>
         <el-col :span="21">
           <a class="title" href="#">火币Pro</a>
@@ -155,10 +155,8 @@ export default {
     }
     .other-info{
       span{
-        color: #303133;
         font-size: 15px;
         a{
-          color:#409EFF;
           padding-left: 1px;
         }
       }
