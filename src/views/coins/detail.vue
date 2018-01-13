@@ -32,7 +32,10 @@
             <div>≈17,015,187BTC</div>
           </el-col>
         </el-row>
-        <!-- 货币流通行情表 -->
+        <!-- k线图 -->
+        <div id="container" class="kline-container" style="width: 788px;height:320px;"></div>
+        <!-- 上架交易所行情 -->
+        <coin-exs-table></coin-exs-table>
       </el-main>
       <el-aside class="coin-other-info" width="320px">
         <div class="title">简介</div>
@@ -65,8 +68,38 @@
 </template>
 
 <script>
+import { createKline } from '@/utils/charts'
+import CoinExsTable from '@/components/Tables/CoinExsTable'
+// import { getCoinDataById } from '@/api/coin'
 export default {
-  name: 'coin-detail'
+  name: 'coin-detail',
+  components: {
+    CoinExsTable
+  },
+  mounted() {
+    // Highcharts.chart('container', this.options)
+    this.fetchCoinDateById()
+  },
+  methods: {
+    fetchCoinDateById() {
+      createKline('container')
+      // let seriesCounter = 0
+      // let names = ['MSFT', 'AAPL', 'GOOG']
+      // names.forEach(name => {
+      //  let url = 'https://data.jianshukeji.com/jsonp?filename=json/' + name.toLowerCase() + '-c.json'
+      //   getCoinDataById(url).then(response => {
+      //     seriesOptions[i] = {
+      //       name: name,
+      //       data: response
+      //      }
+      //     seriesCounter += 1;
+      //     if (seriesCounter === names.length) {
+      //       createKline(seriesOptions);
+      //     }
+      //   })
+      // });
+    }
+  }
 }
 </script>
 
@@ -92,7 +125,7 @@ export default {
   }
 }
 .coin-name{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   padding-bottom: 8px;
@@ -104,6 +137,7 @@ export default {
   }
 }
 .coin-trad-info{
+  margin-bottom: 12px;
   font-size: 13px;
   .el-col div{
     &:first-child{
@@ -127,18 +161,25 @@ export default {
     font-size: 14px;
     .title{
       font-size: 16px;
-      font-weight: 800;
+      font-weight: 700;
       padding-left: 6px;
       margin-left: -6px;
+      margin-top: 6px;
       border-left: solid 3px #409EFF;
     }
     .sub-title{
       font-weight: 700;
     }
     .content{
-      line-break: 18px;
+      line-height: 20px;
       margin: 12px 0;
     }
   }
+.kline-container{
+  margin-bottom: 12px;
+  border: solid 1px #e6e6e6;
+  overflow: hidden;
+} 
+
 </style>
 

@@ -1,5 +1,5 @@
 // 覆盖首页货币列表的Nav样式
-.coins-table, .exchanges-table{
+.coins-table, .exchanges-table, .coin-exs-table, .ex-coins-table{
   padding-top: 12px;
   &>.el-menu>li {
     height: 40px;
@@ -15,9 +15,11 @@
         }
       }
       .el-menu {
+        min-width: 180px;
         top: 40px;
         .el-menu-item{
-          min-width: 100px;
+          float: left;
+          min-width: 80px;
         }
       }
     }
@@ -36,10 +38,10 @@
 
 // 涨跌颜色
 .fall-color {
-  color: #d20;
+  color: #093;
 }
 .rise-color {
-  color: #093;
+  color: #d20;
 }
 .normal-color {
   color: #409EFF;

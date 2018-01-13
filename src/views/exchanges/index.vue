@@ -14,7 +14,7 @@
           <el-col :span="8"><div class="grid-content bg-purple">活跃交易所 3</div></el-col>
         </el-row>
         <!-- 交易概览表 -->
-        <exchanges-table></exchanges-table>
+        <exs-table></exs-table>
       </el-main>
       <el-aside width="320px">Aside</el-aside>
     </el-container>
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import ExchangesTable from '@/components/Tables/ExchangesTable'
+import ExsTable from '@/components/Tables/ExsTable'
 export default {
   name: 'coins',
   components: {
-    ExchangesTable
+    ExsTable
   }
 }
 </script>

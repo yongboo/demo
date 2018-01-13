@@ -1,4 +1,4 @@
-// 货币流通行情列表
+// 交易所列表
 <template>
   <div class="exchanges-table"><!-- 货币列表 -->
     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
@@ -31,61 +31,46 @@
     <div class="exchanges-list">
       <el-row>
         <el-col :span="3" class="icon">
-          <a href="#"><img src="../../assets/ex_imgs/huobipro.png"></a>
+          <router-link :to="'/exchange/' + 'huobipro'"><img src="../../assets/ex_imgs/huobipro.png"></router-link>
         </el-col>
         <el-col :span="21">
-          <a class="title" href="#">火币Pro</a>
+          <router-link :to="'/exchange/' + 'huobipro'" class="title">火币Pro</router-link>
           <span class="country">&nbsp;/&nbsp;中国</span>
           <p class="content">火币全球专业站，是火币集团旗下服务于全球专业交易用户的创新数字资产交易平台，致力于发现优质的创新数字资产投资机会，目前提供四十多种数字资产品类的交易及投资服务，总部位于新加坡，由火币全球专业站团队负责运营</p>
           <div class="other-info">
-            <span>成交额(24h):<a href="#">¥1,021,291万</a></span>
+            <span>成交额(24h):<router-link :to="'/exchange/' + 'huobipro'">¥1,021,291万</router-link></span>
             <span class="line">/</span>
-            <span>交易对:<a href="#">99</a></span>
+            <span>交易对:<router-link :to="'/exchange/' + 'huobipro'">99</router-link></span>
           </div>
         </el-col>
       </el-row>
       <el-row>
         <el-col :span="3" class="icon">
-          <a href="#"><img src="../../assets/ex_imgs/huobipro.png"></a>
+          <router-link :to="'/exchange/' + 'huobipro'"><img src="../../assets/ex_imgs/huobipro.png"></router-link>
         </el-col>
         <el-col :span="21">
-          <a class="title" href="#">火币Pro</a>
-          <span class="country">&nbsp;/&nbsp;中国</span>
-          <p class="content">火币全球专业站，是火币集团旗下服务于全球专业交易用户的创新数字资产交易平台，致力于发现优质的创新数字资产投资机会，目前提供四十多种数字资产品类的交易及投资服务</p>
-          <div class="other-info">
-            <span>成交额(24h):<a href="#">¥1,021,291万</a></span>
-            <span class="line">/</span>
-            <span>交易对:<a href="#">99</a></span>
-          </div>
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="3" class="icon">
-          <a href="#"><img src="../../assets/ex_imgs/huobipro.png"></a>
-        </el-col>
-        <el-col :span="21">
-          <a class="title" href="#">火币Pro</a>
+          <router-link :to="'/exchange/' + 'huobipro'" class="title">火币Pro</router-link>
           <span class="country">&nbsp;/&nbsp;中国</span>
           <p class="content">火币全球专业站，是火币集团旗下服务于全球专业交易用户的创新数字资产交易平台</p>
           <div class="other-info">
-            <span>成交额(24h):<a href="#">¥1,021,291万</a></span>
+            <span>成交额(24h):<router-link :to="'/exchange/' + 'huobipro'">¥1,021,291万</router-link></span>
             <span class="line">/</span>
-            <span>交易对:<a href="#">99</a></span>
+            <span>交易对:<router-link :to="'/exchange/' + 'huobipro'">99</router-link></span>
           </div>
         </el-col>
       </el-row>
       <el-row>
         <el-col :span="3" class="icon">
-          <a href="#"><img src="../../assets/ex_imgs/huobipro.png"></a>
+          <router-link :to="'/exchange/' + 'huobipro'"><img src="../../assets/ex_imgs/huobipro.png"></router-link>
         </el-col>
         <el-col :span="21">
-          <a class="title" href="#">火币Pro</a>
+          <router-link :to="'/exchange/' + 'huobipro'" class="title">火币Pro</router-link>
           <span class="country">&nbsp;/&nbsp;中国</span>
           <p class="content"></p>
           <div class="other-info">
-            <span>成交额(24h):<a href="#">¥1,021,291万</a></span>
+            <span>成交额(24h):<router-link :to="'/exchange/' + 'huobipro'">¥1,021,291万</router-link></span>
             <span class="line">/</span>
-            <span>交易对:<a href="#">99</a></span>
+            <span>交易对:<router-link :to="'/exchange/' + 'huobipro'">99</router-link></span>
           </div>
         </el-col>
       </el-row>
@@ -96,7 +81,7 @@
 <script>
 // import { formatCurrency } from '@/utils/common'
 export default {
-  name: 'CoinListTable',
+  name: 'ExsTable',
   data() {
     return {
       activeIndex: '1',

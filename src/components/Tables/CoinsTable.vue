@@ -45,6 +45,9 @@
         prop="name"
         label="名称"
         width="110">
+         <template slot-scope="scope">
+           <router-link :to="'/coin/' + scope.row.name">{{scope.row.name}}</router-link>
+         </template>  
       </el-table-column>
       <el-table-column
         prop="circ_value"
@@ -59,16 +62,10 @@
         label="价格"
         sortable
         :sort-method="price_sort"
-        :formatter="price_formatter"
         width="80">
-      </el-table-column>
-      <el-table-column
-        prop="circ_number"
-        label="流通数量"
-        sortable
-        :sort-method="circ_number_sort"
-        :formatter="circ_number_formatter"
-        width="110">
+        <template slot-scope="scope">
+           <router-link :to="'/coin/' + scope.row.name">¥{{scope.row.price}}</router-link>
+         </template>
       </el-table-column>
       <el-table-column
         prop="increase_24"
@@ -79,11 +76,19 @@
         width="110">
       </el-table-column>
       <el-table-column
-        prop="trans_vol"
+        prop="circ_number"
+        label="流通数量"
+        sortable
+        :sort-method="circ_number_sort"
+        :formatter="circ_number_formatter"
+        width="110">
+      </el-table-column>
+      <el-table-column
+        prop="volume_sum"
         label="成交额(24h)"
         sortable
-        :sort-method="trans_vol_sort"
-        :formatter="trans_vol_formatter"
+        :sort-method="volume_sum_sort"
+        :formatter="volume_sum_formatter"
         width="120">
       </el-table-column>
       <el-table-column
@@ -102,20 +107,20 @@ export default {
     return {
       activeIndex: '1',
       tableData: [{
-        name: 'BTC-比特币',
+        name: 'BTC',
         circ_value: '1805156743245.2323',
         price: '107581',
         circ_number: '1671',
         increase_24: '-12.01',
-        trans_vol: '16042181',
+        volume_sum: '16042181',
         price_trend: ''
       }, {
         name: 'BTC-比特币',
         circ_value: '18052',
-        price: '107582',
+        price: '82',
         circ_number: '1672',
         increase_24: '12.02',
-        trans_vol: '16042182.0',
+        volume_sum: '16042182.0',
         price_trend: ''
       }, {
         name: 'BTC-比特币',
@@ -123,7 +128,7 @@ export default {
         price: '107583.1',
         circ_number: '1673',
         increase_24: '-12.03',
-        trans_vol: '16042183',
+        volume_sum: '16042183',
         price_trend: ''
       }, {
         name: 'BTC-比特币',
@@ -131,7 +136,7 @@ export default {
         price: '107584',
         circ_number: '80',
         increase_24: '12.04',
-        trans_vol: '16042184',
+        volume_sum: '16042184',
         price_trend: ''
       }, {
         name: 'XRP-瑞波币',
@@ -139,7 +144,7 @@ export default {
         price: '20.74',
         circ_number: '3873915',
         increase_24: '-14.95',
-        trans_vol: '4459905',
+        volume_sum: '4459905',
         price_trend: ''
       }]
     }
@@ -154,17 +159,17 @@ export default {
       // console.log(row.circ_value)
       // return '¥' + row.circ_value + '亿'
     },
-    price_formatter(row, column) {
-      return '¥' + row.price
-    },
+    // price_formatter(row, column) {
+    //   return '¥' + row.price
+    // },
     circ_number_formatter(row, column) {
       return row.circ_number + '万'
     },
     increase_24_formatter(row, column) {
       return row.increase_24 + '%'
     },
-    trans_vol_formatter(row, column) {
-      return '¥' + row.trans_vol + '万'
+    volume_sum_formatter(row, column) {
+      return '¥' + row.volume_sum + '万'
     },
     circ_value_sort(a, b) {
       return parseFloat(a.circ_value) - parseFloat(b.circ_value)
@@ -178,13 +183,13 @@ export default {
     increase_24_sort(a, b) {
       return parseFloat(a.increase_24) - parseFloat(b.increase_24)
     },
-    trans_vol_sort(a, b) {
-      return parseFloat(a.trans_vol) - parseFloat(b.trans_vol)
+    volume_sum_sort(a, b) {
+      return parseFloat(a.volume_sum) - parseFloat(b.volume_sum)
     },
     tableCellClassName({ row, column, rowIndex, columnIndex }) {
-      if (columnIndex === 1 || columnIndex === 3 || columnIndex === 6 || columnIndex === 7) {
+      if (columnIndex === 1 || columnIndex === 3 || columnIndex === 7) {
         return 'normal-color'
-      } else if (columnIndex === 5) {
+      } else if (columnIndex === 4) {
         if (parseFloat(row['increase_24']) >= 0) {
           return 'rise-color'
         } else {

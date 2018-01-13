@@ -44,7 +44,7 @@ export const constantRouterMap = [
   },
 
   {
-    path: '/coins/:coinName', // 货币详情页面
+    path: '/coin/:coinName', // 货币详情页面
     component: Layout,
     hidden: true,
     children: [
@@ -70,7 +70,7 @@ export const constantRouterMap = [
   },
 
   {
-    path: '/exchanges/:exchangeName', // 交易所详情页面
+    path: '/exchange/:exchangeName', // 交易所详情页面
     component: Layout,
     hidden: true,
     children: [
