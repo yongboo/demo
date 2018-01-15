@@ -37,31 +37,36 @@
         <!-- 上架交易所行情 -->
         <coin-exs-table></coin-exs-table>
       </el-main>
-      <el-aside class="coin-other-info" width="320px">
-        <div class="title">简介</div>
-        <p class="content">比特币（BitCoin）的概念最初由中本聪在2009年提出，根据中本聪的思路设计发布的开源软件以及建构其上的P2P网络。比特币是一种P2P形式的数字货币</p>
-        <p>
-          <span class="sub-title">网站：</span>
-           <a href="https://bitcoin.org/" rel="nofollow" target="_blank">网站1</a>
-           <a href="https://www.bitcoin.com/" rel="nofollow" target="_blank">网站2</a>
-        </p>
-        <p>
-          <span class="sub-title">白皮书：</span>
-          <a href="http://www.bitcoin.org/bitcoin.pdf" target="_blank" rel="nofollow">http://www.bitcoin.org/bitcoin.pdf</a>
-        </p>
-        <p>
-          <span class="sub-title">区块站：</span>
-          <a href="http://blockchain.info" rel="nofollow" target="_blank">区块站1</a>
-          <a href="https://blockexplorer.com/" rel="nofollow" target="_blank">区块站2</a> 
-        </p>
-         <p>
-          <span class="sub-title">发布时间：</span>
-          2008-11-01
-        </p>
-        <p>
-          <span class="sub-title">上架交易所：</span>
-          <a href="#">165家</a>
-        </p>
+      <el-aside width="320px">
+        <div class="section">
+          <div class="title">简介</div>
+          <p class="content">比特币（BitCoin）的概念最初由中本聪在2009年提出，根据中本聪的思路设计发布的开源软件以及建构其上的P2P网络。比特币是一种P2P形式的数字货币</p>
+          <p>
+            <span class="sub-title">网站：</span>
+            <a href="https://bitcoin.org/" rel="nofollow" target="_blank">网站1</a>
+            <a href="https://www.bitcoin.com/" rel="nofollow" target="_blank">网站2</a>
+          </p>
+          <p>
+            <span class="sub-title">白皮书：</span>
+            <a href="http://www.bitcoin.org/bitcoin.pdf" target="_blank" rel="nofollow">http://www.bitcoin.org/bitcoin.pdf</a>
+          </p>
+          <p>
+            <span class="sub-title">区块站：</span>
+            <a href="http://blockchain.info" rel="nofollow" target="_blank">区块站1</a>
+            <a href="https://blockexplorer.com/" rel="nofollow" target="_blank">区块站2</a> 
+          </p>
+          <p>
+            <span class="sub-title">发布时间：</span>
+            2008-11-01
+          </p>
+          <p>
+            <span class="sub-title">上架交易所：</span>
+            <a href="#">165家</a>
+          </p>
+        </div>
+        <div class="section">
+          <div>AD</div>
+        </div>
       </el-aside>
     </el-container>
   </div>
@@ -157,24 +162,24 @@ export default {
     }
   }
 }
-.coin-other-info{
-    font-size: 14px;
-    .title{
-      font-size: 16px;
-      font-weight: 700;
-      padding-left: 6px;
-      margin-left: -6px;
-      margin-top: 6px;
-      border-left: solid 3px #409EFF;
-    }
-    .sub-title{
-      font-weight: 700;
-    }
-    .content{
-      line-height: 20px;
-      margin: 12px 0;
-    }
-  }
+// .coin-other-info{
+//     font-size: 14px;
+//     .title{
+//       font-size: 16px;
+//       font-weight: 700;
+//       padding-left: 6px;
+//       margin-left: -6px;
+//       margin-top: 6px;
+//       border-left: solid 3px #409EFF;
+//     }
+//     .sub-title{
+//       font-weight: 700;
+//     }
+//     .content{
+//       line-height: 20px;
+//       margin: 12px 0;
+//     }
+//   }
 .kline-container{
   margin-bottom: 12px;
   border: solid 1px #e6e6e6;

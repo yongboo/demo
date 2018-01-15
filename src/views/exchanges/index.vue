@@ -16,7 +16,11 @@
         <!-- 交易概览表 -->
         <exs-table></exs-table>
       </el-main>
-      <el-aside width="320px">Aside</el-aside>
+      <el-aside width="320px">
+        <div class="section">
+          <div class="title">交易所成交额排行榜</div>
+        </div>
+      </el-aside>
     </el-container>
   </div>
 </template>

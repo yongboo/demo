@@ -4,17 +4,19 @@
     <div class="main-container">
       <app-main></app-main>
     </div>
+    <footerbar class="footerbar-container"></footerbar>
   </div>
 </template>
 
 <script>
-import { Headerbar, AppMain } from '@/views/layout/components'
+import { Headerbar, AppMain, Footerbar } from '@/views/layout/components'
 
 export default {
   name: 'layout',
   components: {
     Headerbar,
-    AppMain
+    AppMain,
+    Footerbar
   }
 }
 </script>

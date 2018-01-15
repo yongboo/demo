@@ -29,13 +29,15 @@
         <!-- 交易所上架货币行情 -->
         <ex-coins-table></ex-coins-table>
       </el-main>
-      <el-aside class="coin-other-info" width="320px">
-        <div class="title">24小时平台成交额</div>
-        <p class="volume content">
-          <b>¥10,523,685,338</b>
-          <span class="ranking">排名NO.6</span>
-          <span class="approximate">≈$1,578,552,801&nbsp;≈101,785BTC</span>
-        </p>
+      <el-aside width="320px">
+        <div class="section volume-section">
+          <div class="title">24小时平台成交额</div>
+          <p class="volume content">
+            <b>¥10,523,685,338</b>
+            <span class="ranking">排名NO.6</span>
+            <span class="approximate">≈$1,578,552,801&nbsp;≈101,785BTC</span>
+          </p>
+        </div>
       </el-aside>
     </el-container>
   </div>
@@ -101,38 +103,22 @@ export default {
     }
   }
 }
-.coin-other-info{
-    font-size: 14px;
-    .title{
+.volume-section{
+  .volume{
+    font-size: 24px;
+    .ranking{
+      background-color: #06c;
+      font-size: 14px;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      position: relative;
+      top: -2px;
+    }
+    .approximate{
       font-size: 16px;
-      font-weight: 800;
-      padding-left: 6px;
-      margin-left: -6px;
-      margin-top: 6px;
-      border-left: solid 3px #409EFF;
-    }
-    .sub-title{
-      font-weight: 700;
-    }
-    .content{
-      line-height: 20px;
-      margin: 12px 0;
-    }
-    .volume{
-      font-size: 24px;
-      .ranking{
-        background-color: #06c;
-        font-size: 14px;
-        color: #fff;
-        padding: 2px 8px;
-        border-radius: 4px;
-        position: relative;
-        top: -2px;
-      }
-      .approximate{
-        font-size: 16px;
-      }
     }
   }
+}
 </style>
 
