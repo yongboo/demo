@@ -13,7 +13,7 @@
         <el-menu-item index="5-3">期货</el-menu-item>
       </el-submenu>
       <el-submenu index="6">
-        <template slot="title">国家</template>
+        <template slot="title">所在地</template>
         <el-menu-item index="6-1">全部</el-menu-item>
         <el-menu-item index="6-2">中国</el-menu-item>
         <el-menu-item index="6-3">美国</el-menu-item>
@@ -35,7 +35,7 @@
         </el-col>
         <el-col :span="21">
           <router-link :to="'/exchange/' + 'huobipro'" class="title">火币Pro</router-link>
-          <span class="country">&nbsp;/&nbsp;中国</span>
+          <span class="region">&nbsp;/&nbsp;中国</span>
           <p class="content">火币全球专业站，是火币集团旗下服务于全球专业交易用户的创新数字资产交易平台，致力于发现优质的创新数字资产投资机会，目前提供四十多种数字资产品类的交易及投资服务，总部位于新加坡，由火币全球专业站团队负责运营</p>
           <div class="other-info">
             <span>成交额(24h):<router-link :to="'/exchange/' + 'huobipro'">¥1,021,291万</router-link></span>
@@ -50,7 +50,7 @@
         </el-col>
         <el-col :span="21">
           <router-link :to="'/exchange/' + 'huobipro'" class="title">火币Pro</router-link>
-          <span class="country">&nbsp;/&nbsp;中国</span>
+          <span class="region">&nbsp;/&nbsp;中国</span>
           <p class="content">火币全球专业站，是火币集团旗下服务于全球专业交易用户的创新数字资产交易平台</p>
           <div class="other-info">
             <span>成交额(24h):<router-link :to="'/exchange/' + 'huobipro'">¥1,021,291万</router-link></span>
@@ -65,7 +65,7 @@
         </el-col>
         <el-col :span="21">
           <router-link :to="'/exchange/' + 'huobipro'" class="title">火币Pro</router-link>
-          <span class="country">&nbsp;/&nbsp;中国</span>
+          <span class="region">&nbsp;/&nbsp;中国</span>
           <p class="content"></p>
           <div class="other-info">
             <span>成交额(24h):<router-link :to="'/exchange/' + 'huobipro'">¥1,021,291万</router-link></span>
@@ -126,7 +126,7 @@ export default {
       font-size: 18px;
       font-weight: 600;
     }
-    .country{
+    .region{
       font-size: 13px;
       color:#888888;
     }

@@ -16,9 +16,10 @@
         <coins-table></coins-table>
       </el-main>
       <el-aside width="320px">
-        <div class="section" style="height: 360px;">
+        <div class="section notice-section" style="height: 240px;">
           <div class="title">交易所最新公告</div>
-
+          <!-- 滚动公告组件 -->
+          <scroll-notice></scroll-notice>
         </div>
         <div class="section" style="height: 120px;">AD</div>
         <div class="section up-down-section" style="height: 300px;">
@@ -51,6 +52,7 @@
 
 <script>
 import CoinsTable from '@/components/Tables/CoinsTable'
+import ScrollNotice from '@/components/Notice/ScrollNotice'
 export default {
   name: 'coins',
   data() {
@@ -63,7 +65,8 @@ export default {
     }
   },
   components: {
-    CoinsTable
+    CoinsTable,
+    ScrollNotice
   },
   mounted() {
     this.up_down_list = '涨幅榜24小时榜单'
@@ -88,6 +91,7 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
+@import 'src/styles/variables.scss';
 .ad-container{
   .el-row {
     margin-bottom: 20px;

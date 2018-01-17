@@ -22,7 +22,7 @@
             <a href="https://www.huobi.pro/" rel="nofollow" target="_blank">https://www.huobi.pro</a>
           </el-col>
           <el-col class="other-info" :span="6">
-            <span class="title">国家：</span>
+            <span class="title">所在地：</span>
             中国香港
           </el-col>
         </el-row>
